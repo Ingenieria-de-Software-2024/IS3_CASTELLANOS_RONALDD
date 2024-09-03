@@ -19,7 +19,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/IS3_CASTELLANOS_RONALDD/">
-                <img src="<?= asset('./images/cit.png') ?>" width="35px'" alt="cit">
+                <img src="<?= asset('./images/mdn.png') ?>" width="35px'" alt="cit">
                 IS3
             </a>
             <div class="collapse navbar-collapse" id="navbarToggler">
@@ -50,6 +50,9 @@
                             </li>
                             <li>
                                 <a class="dropdown-item nav-link text-white " href="/IS3_CASTELLANOS_RONALDD/mapa"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Mapa</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/IS3_CASTELLANOS_RONALDD/estadisticas"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Estadisticas</a>
                             </li>
                         </ul>
 

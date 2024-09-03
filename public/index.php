@@ -8,7 +8,7 @@ use Controllers\MapaController;
 use Controllers\OperacionController;
 use Controllers\UsuarioController;
 use Controllers\RolController;
-use Controllers\MapaControllerController;
+use Controllers\DetalleController;
 
 $router = new Router();
 $router->setBaseURL('/' . $_ENV['APP_NAME']);
@@ -38,6 +38,10 @@ $router->post('/API/rol/eliminar', [RolController::class, 'eliminarAPI']);
 
 //MAPA
 $router->get('/mapa', [MapaController::class, 'index']);
+
+// DETALLE
+$router->get('/estadisticas', [DetalleController::class, 'estadisticas']);
+$router->get('/API/detalle/estadisticas', [DetalleController::class, 'detalleOperacionesAPI']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();
