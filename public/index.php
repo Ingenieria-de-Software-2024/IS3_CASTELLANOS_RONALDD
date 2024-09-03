@@ -6,7 +6,7 @@ use MVC\Router;
 use Controllers\AppController;
 use Controllers\OperacionController;
 use Controllers\UsuarioController;
-use Controllers\OperacionControllerController;
+use Controllers\RolController;
 
 $router = new Router();
 $router->setBaseURL('/' . $_ENV['APP_NAME']);
@@ -26,6 +26,13 @@ $router->post('/API/operaciones/guardar', [OperacionController::class, 'guardarA
 $router->get('/API/operaciones/buscar', [OperacionController::class, 'buscarAPI']);
 $router->post('/API/operaciones/modificar', [OperacionController::class, 'modificarAPI']);
 $router->post('/API/operaciones/eliminar', [OperacionController::class, 'eliminarAPI']);
+
+// ROL
+$router->get('/rol', [RolController::class, 'index']);
+$router->post('/API/rol/guardar', [RolController::class, 'guardarAPI']);
+$router->get('/API/rol/buscar', [RolController::class, 'buscarAPI']);
+$router->post('/API/rol/modificar', [RolController::class, 'modificarAPI']);
+$router->post('/API/rol/eliminar', [RolController::class, 'eliminarAPI']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();
