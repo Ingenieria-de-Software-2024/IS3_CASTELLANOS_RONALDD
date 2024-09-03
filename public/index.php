@@ -4,9 +4,11 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AppController;
+use Controllers\MapaController;
 use Controllers\OperacionController;
 use Controllers\UsuarioController;
 use Controllers\RolController;
+use Controllers\MapaControllerController;
 
 $router = new Router();
 $router->setBaseURL('/' . $_ENV['APP_NAME']);
@@ -33,6 +35,9 @@ $router->post('/API/rol/guardar', [RolController::class, 'guardarAPI']);
 $router->get('/API/rol/buscar', [RolController::class, 'buscarAPI']);
 $router->post('/API/rol/modificar', [RolController::class, 'modificarAPI']);
 $router->post('/API/rol/eliminar', [RolController::class, 'eliminarAPI']);
+
+//MAPA
+$router->get('/mapa', [MapaController::class, 'index']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

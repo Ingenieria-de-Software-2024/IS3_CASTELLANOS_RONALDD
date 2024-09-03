@@ -48,7 +48,11 @@
                             <li>
                                 <a class="dropdown-item nav-link text-white " href="/IS3_CASTELLANOS_RONALDD/operaciones"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Registro</a>
                             </li>
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/IS3_CASTELLANOS_RONALDD/mapa"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Mapa</a>
+                            </li>
                         </ul>
+
                     </div>
 
                     <div class="nav-item dropdown ">
